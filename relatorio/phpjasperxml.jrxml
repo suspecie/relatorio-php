@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="phpjasperxml" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b266dae5-52b3-4d47-85e5-ad4cfc8e0ad6">
 	<property name="ireport.zoom" value="1.6105100000000008"/>
-	<property name="ireport.x" value="79"/>
-	<property name="ireport.y" value="28"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="descricao" class="java.lang.String">
+		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
+	</parameter>
+	<parameter name="titulo" class="java.lang.String">
+		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
+	</parameter>
+	<parameter name="pageheader" class="java.lang.String">
+		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
+	</parameter>
+	<parameter name="footer" class="java.lang.String">
+		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
+	</parameter>
+	<parameter name="summary" class="java.lang.String">
+		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
+	</parameter>
+	<parameter name="pagefooter" class="java.lang.String">
 		<parameterDescription><![CDATA[Descrição]]></parameterDescription>
 	</parameter>
 	<queryString>

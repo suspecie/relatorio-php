@@ -84,59 +84,149 @@ Distro utilizada: Debian 8
     
 ![alt text](docs/images/novo_relatorio.png "Novo Relatorio")
 
-    Dar um nome e um caminoh para o arquivo > Proximo > FInalizar
-    c) Clicar no ícone Report Datasources ou na aba Welcome > Step 1
-    d) Escolher a opção Database JDBC connection > Next > Escolher o drive > Dar um nome para a conexão "conexão" (é somente um nome para identificar a conexão no iReport) > em JDBC URL colocar o drive JDBC que será utilizado
+    c) No campo "Report Name" colocar um nome para o seu relatório
+    d) No campo "Location" selecionar um caminho para o arquivo > Clique em Próximo > Clique em Finalizar
+
+![alt text](docs/images/novo_relatorio2.png "Novo Relatorio")
+![alt text](docs/images/novo_relatorio3.png "Novo Relatorio")
+
+    c) Clicar no ícone Report Datasources para criar uma nova conexão com o banco de dados
+
+![alt text](docs/images/nova_conexao_db.png "Nova Conexão DB")
+
+    d) Na nova janela que irá aparecer clicar em New
+    e) Em seguida escolher a opção "Database JDBC connection" > Clicar no botão Next 
+
+![alt text](docs/images/nova_conexao_db2.png "Nova Conexão DB")
+![alt text](docs/images/nova_conexao_db3.png "Nova Conexão DB")
+
+    f) No campo nome colocar um nome para a conexão (é somente um nome para identificar a conexão no iReport) > No campo JDBC Driver escolher o drive, no meu caso utilizei o MySQL (com.mysql.jdbc.Driver) > No campo JDBC URL colocar o url da conexao com o banco.
         
-    - Exemplo: jdbc:mysql://localhost/db_report_php
+    - Exemplo: jdbc:mysql://localhost/db_relatorio_php
                     Endereço da maquina onde o banco de encontra. Ex: 192.168.0.1;
                     Porta de conexão do banco; Default 1521;
                     A instancia do banco. Ex: oradata;
 
-    e) Colocar nome do usuário do banco e senha do banco > Testar conexão > Salvar
-    f) Selecionar a conexão que foi criada. (é só escolher a conexão criada no campo empty datasource)
-    g) Selecionar a opção Preview > PDF Preview
-    h) Clicar no icone de DB do relatório > colar a query:
-        SELECT * FROM usuarios;
-    i) Clicar em Save query
-    j) Clicar em fields para ver se as colunas do select estão lá.
-    k) Clique em parameters > New
-    l) Arraste os fields e parametros para o relatório
-    m) Posicione os fields em Detail
-    n) Posicione os parametros em Column Header
-    o) Em casa field alterar para ler o campo do retorno da consulta > nas propriedades do field ir em Text Field Expression
-    p) Em cada parametro passar o nome do parametro por exemplo: $P{descricao}
+    e) No campo "Username" colocar nome do usuário do banco e no campo "Password" colocar senha do banco > Clicar no botão "Test" para testar conexão > Clicar no botão Save
 
+![alt text](docs/images/nova_conexao_db4.png "Nova Conexão DB")
+
+    f) Selecionar a conexão que foi criada.
+
+![alt text](docs/images/nova_conexao_db4.png "Nova Conexão DB")
+
+    g) Para poder visualizar o relatório no próprio iReport no menu Preview > Selecionar a opção PDF Preview
+
+![alt text](docs/images/preview_pdf.png "PDF Preview")
+
+    h) Clicar no icone de DB do relatório para adicionar a query
+
+![alt text](docs/images/query.png "Query")
+
+    i) Na aba "Report" colocar a query: SELECT * FROM usuarios;
+    j) Clicar em Save query
+
+![alt text](docs/images/query2.png "Query")
+
+ 
+    k) No panel "Report Inspector" > Clicar em fields para ver se as colunas do select estão lá.
+
+![alt text](docs/images/fields.png "Fields")
+
+    l) No panel "Report Inspection" > Clique com o botão direito em Parameters > Clicar em Adicionar Parameter
+
+![alt text](docs/images/parameters.png "Parameters")
+
+    m) Será criado um parameter com nome parameter1, poré é necessário alterar o nome. 
+    n) Clique com o botão direito em cima do parametro criado > Em seguida clique em renomear e de um novo nome para o parametro
+
+![alt text](docs/images/parameters1.png "Parameters")
+
+    o) Clique em cada field ou parametro e arraste-os para a área de designer
+    p) Posicione os fields em Detail
+    q) Posicione os parametros em Column Header
+
+![alt text](docs/images/designer.png "Designer")
+
+    r) Na área de designer clique em cada field e no painel Propriedades clique em "Text Field Expression"
+
+![alt text](docs/images/propriedades.png "Propriedades")
+
+    s) Na tela "Text Field Expression" selecionar na primeira coluna a opção Fields e na segunda coluna selecionar a coluna do banco que pertence aquele field > Clicar em OK
+
+
+![alt text](docs/images/propriedades2.png "Propriedades")
+
+    t) Na área de designer clique em cada parametro e no painel Propriedades clique em "Text Field Expression"
+
+![alt text](docs/images/propriedades3.png "Propriedades")
+
+    u) Na tela "Text Field Expression" selecionar na primeira coluna a opção Parameters e na segunda coluna selecionar o parametro a que pertence aquele parametro > Clicar em OK
+
+![alt text](docs/images/propriedades4.png "Propriedades")
+
+    v)Obs: Nas propriedades "Text Field Expression" quando são fields do banco, eles tem que ficar na cor verde, pois significa que não esta com erro. Os parametros continuam vermelhos mesmo estando certos.
+    w) Para verificar se o seu relatório esta mostrando os dados correatamente clique na aba Preview para visualizar a prévia do PDF.
+    x) Caso não mostre o Preview signifca que o relatório esta com erro e precisa corrigir.
+
+![alt text](docs/images/preview_pdf2.png "Preview PDF")
 
 
 5- Preparando o projeto (Somente para ensinar)
 
-    a) Deixar somente a pasta class e o arquivo setting.php do PHPJasperXML
-    b) Alterar o arquivo setting.php informando a conexão com o banco de dados
-    c) Criar um arquivo php que irá instanciar a PHPJasperXML e enviar os parametros para o arquivo jasper
-    d) Criar um arquivo index caso queira
+    a) Criar uma pasta para o projeto e colocá-la em html. Ex.: relatorio-php
+    b) Criar uma pasta PHPJasperXML. Ex.: relatorio-php/PHPJasperXML
+    c) Criar uma pasta banco. Ex.: relatorio-php/banco
+    d) Criar uma pasta relatorio. Ex.: relatorio-php/relatorio
+    e) Criar um arquivo php que irá instanciar a classe PHPJasperXML. Ex.: exemplorelatorio.php
+    f) Criar um arquivo index que poderá receber os dados e após o submit enviar para o exemplorelatorio.php. Ex: index.php
+    g) Dentro da pasta PHPJasperXML coloque a pasta class e o arquivo setting.php do PHPJasperXML, que foi baixado no passo "2".
+    h) Dentro da pasta banco coloque o script que será utilizado para criação do banco de dados, somente para organização.
+    i) Somente por organização, coloque também dentro da pasta banco a query que foi salva no iReport, no passo "4- i)"
+    j) Dentro da pasta relatorio salve o arquivo .jrxml criado pelo iReport.
+    k) Altere o arquivo relatorio-php/PHPJasperXML/setting.php informando a conexão com o banco de dados. Ver exemplo: relatorio-php/PHPJasperXML/setting.php
+    l) Altere o arquivo index para criar um formulario que passa as informações por get ou post. Ver exemplo: relatorio-php/index.php
+    m) Altere o arquivo exemplorelatorio.php para instanciar a classe PHPJasperXML e passar as informações para a geração do PDF. Ver exemplo: relatorio-php/exemplorelatorio.php
+    o) Acessar no navegador o endereco http://localhost/relatorio-php/
+    p) Preencha as informações e clique em ENVIAR, o PDF deverá ser mostrado
 
 
-# INSTALANDO O PROJETO
+![alt text](docs/images/estruturaprojeto.png "Projeto")
 
-1) Fazer git clone 
-2) Rodar script  banco/db_relatorio_php.sql
-3) Dar permissão: # chmod 777 relatorio-php/ -R
-4) Acessar o link: http://localhost/relatorio-php/
-5) Preencher os campos 
-6) Clicar no botão Enviar
-7) Pronto! :) você deverá ver o PDF
+![alt text](docs/images/visaoireport.png "Projeto no iReport")
+
+![alt text](docs/images/visaoireport2.png "Projeto no iReport")
+
+![alt text](docs/images/teste.png "Projeto")
+
+![alt text](docs/images/teste2.png "Projeto")
+
+![alt text](docs/images/teste3.png "Projeto")
+
+![alt text](docs/images/teste4.png "Projeto")
+
+
+
+# INSTALANDO O PROJETO DO GIT
+
+    1) Fazer git clone 
+    2) Rodar script  banco/db_relatorio_php.sql
+    3) Dar permissão: # chmod 777 relatorio-php/ -R
+    4) Acessar o link: http://localhost/relatorio-php/
+    5) Preencher os campos 
+    6) Clicar no botão Enviar
+    7) Pronto! :) você deverá ver o PDF
 
 
 
 # FONTES UTILIZADAS NO PROJETO
 
-http://imasters.com.br/artigo/15736/php/usando-o-ireport-como-gerador-de-relatorios-para-php/?trace=1519021197&source=single
-https://www.vivaolinux.com.br/dica/Relatorios-do-iReport-no-PHP-com-PHPJasperXML
-http://chathurangat.blogspot.com.br/2012/03/jasperreports-with-php.html
-http://blog.ibusplus.com/2013/06/instalacion-de-ireport-en-linux-la.html
-http://javafree.uol.com.br/artigo/3154/Tutorial-de-IREPORT.html
-http://www.fpdf.org/
-http://community.jaspersoft.com/project/ireport-designer/releases 
-http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk7-downloads-1880260.html
-http://www.simitgroup.com/?q=PHPJasperXML
+    http://imasters.com.br/artigo/15736/php/usando-o-ireport-como-gerador-de-relatorios-para-php/?trace=1519021197&source=single
+    https://www.vivaolinux.com.br/dica/Relatorios-do-iReport-no-PHP-com-PHPJasperXML
+    http://chathurangat.blogspot.com.br/2012/03/jasperreports-with-php.html
+    http://blog.ibusplus.com/2013/06/instalacion-de-ireport-en-linux-la.html
+    http://javafree.uol.com.br/artigo/3154/Tutorial-de-IREPORT.html
+    http://www.fpdf.org/
+    http://community.jaspersoft.com/project/ireport-designer/releases 
+    http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk7-downloads-1880260.html
+    http://www.simitgroup.com/?q=PHPJasperXML
