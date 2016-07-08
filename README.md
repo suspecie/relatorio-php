@@ -161,7 +161,7 @@ Distro utilizada: Debian 8
 
 ![alt text](docs/images/propriedades3.png "Propriedades")
 
-    w) Na tela "Text Field Expression" selecionar na primeira coluna a opção Parameters e na segunda coluna selecionar o parametro a que pertence aquele parametro > Clicar em OK
+    y) Na tela "Text Field Expression" selecionar na primeira coluna a opção Parameters e na segunda coluna selecionar o parametro a que pertence aquele parametro > Clicar em OK
 
 ![alt text](docs/images/propriedades4.png "Propriedades")
 
@@ -197,13 +197,13 @@ Distro utilizada: Debian 8
 
 ![alt text](docs/images/visaoireport2.png "Projeto no iReport")
 
-![alt text](docs/images/teste.png "Projeto")
+![alt text](docs/images/testeproj.png "Projeto")
 
-![alt text](docs/images/teste2.png "Projeto")
+![alt text](docs/images/testeproj2.png "Projeto")
 
-![alt text](docs/images/teste3.png "Projeto")
+![alt text](docs/images/testeproj3.png "Projeto")
 
-![alt text](docs/images/teste4.png "Projeto")
+![alt text](docs/images/testeproj4.png "Projeto")
 
 
 
