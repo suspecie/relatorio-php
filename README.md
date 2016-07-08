@@ -113,7 +113,7 @@ Distro utilizada: Debian 8
 
     f) Selecionar a conexão que foi criada.
 
-![alt text](docs/images/nova_conexao_db4.png "Nova Conexão DB")
+![alt text](docs/images/nova_conexao_db5.png "Nova Conexão DB")
 
     g) Para poder visualizar o relatório no próprio iReport no menu Preview > Selecionar a opção PDF Preview
 
