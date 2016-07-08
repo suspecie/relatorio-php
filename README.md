@@ -82,7 +82,7 @@ Distro utilizada: Debian 8
     a) Abrir iReport
     b) No menu Arquivo > Clicar em New > Escolher a Sessão Report > Escolher o modelo Blank A4 > Clicar no botão "Open This Template"
     
-    ![alt text](docs/images/novo_relatorio.png "Novo Relatorio")
+![alt text](docs/images/novo_relatorio.png "Novo Relatorio")
 
     Dar um nome e um caminoh para o arquivo > Proximo > FInalizar
     c) Clicar no ícone Report Datasources ou na aba Welcome > Step 1
