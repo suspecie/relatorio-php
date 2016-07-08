@@ -90,84 +90,84 @@ Distro utilizada: Debian 8
 ![alt text](docs/images/novo_relatorio2.png "Novo Relatorio")
 ![alt text](docs/images/novo_relatorio3.png "Novo Relatorio")
 
-    c) Clicar no ícone Report Datasources para criar uma nova conexão com o banco de dados
+    e) Clicar no ícone Report Datasources para criar uma nova conexão com o banco de dados
 
 ![alt text](docs/images/nova_conexao_db.png "Nova Conexão DB")
 
-    d) Na nova janela que irá aparecer clicar em New
-    e) Em seguida escolher a opção "Database JDBC connection" > Clicar no botão Next 
+    f) Na nova janela que irá aparecer clicar em New
+    g) Em seguida escolher a opção "Database JDBC connection" > Clicar no botão Next 
 
 ![alt text](docs/images/nova_conexao_db2.png "Nova Conexão DB")
 ![alt text](docs/images/nova_conexao_db3.png "Nova Conexão DB")
 
-    f) No campo nome colocar um nome para a conexão (é somente um nome para identificar a conexão no iReport) > No campo JDBC Driver escolher o drive, no meu caso utilizei o MySQL (com.mysql.jdbc.Driver) > No campo JDBC URL colocar o url da conexao com o banco.
+    h) No campo nome colocar um nome para a conexão (é somente um nome para identificar a conexão no iReport) > No campo JDBC Driver escolher o drive, no meu caso utilizei o MySQL (com.mysql.jdbc.Driver) > No campo JDBC URL colocar o url da conexao com o banco.
         
     - Exemplo: jdbc:mysql://localhost/db_relatorio_php
                     Endereço da maquina onde o banco de encontra. Ex: 192.168.0.1;
                     Porta de conexão do banco; Default 1521;
                     A instancia do banco. Ex: oradata;
 
-    e) No campo "Username" colocar nome do usuário do banco e no campo "Password" colocar senha do banco > Clicar no botão "Test" para testar conexão > Clicar no botão Save
+    i) No campo "Username" colocar nome do usuário do banco e no campo "Password" colocar senha do banco > Clicar no botão "Test" para testar conexão > Clicar no botão Save
 
 ![alt text](docs/images/nova_conexao_db4.png "Nova Conexão DB")
 
-    f) Selecionar a conexão que foi criada.
+    j) Selecionar a conexão que foi criada.
 
 ![alt text](docs/images/nova_conexao_db5.png "Nova Conexão DB")
 
-    g) Para poder visualizar o relatório no próprio iReport no menu Preview > Selecionar a opção PDF Preview
+    k) Para poder visualizar o relatório no próprio iReport no menu Preview > Selecionar a opção PDF Preview
 
 ![alt text](docs/images/preview_pdf.png "PDF Preview")
 
-    h) Clicar no icone de DB do relatório para adicionar a query
+    l) Clicar no icone de DB do relatório para adicionar a query
 
 ![alt text](docs/images/query.png "Query")
 
-    i) Na aba "Report" colocar a query: SELECT * FROM usuarios;
-    j) Clicar em Save query
+    m) Na aba "Report" colocar a query: SELECT * FROM usuarios;
+    n) Clicar em Save query
 
 ![alt text](docs/images/query2.png "Query")
 
  
-    k) No panel "Report Inspector" > Clicar em fields para ver se as colunas do select estão lá.
+    o) No panel "Report Inspector" > Clicar em fields para ver se as colunas do select estão lá.
 
 ![alt text](docs/images/fields.png "Fields")
 
-    l) No panel "Report Inspection" > Clique com o botão direito em Parameters > Clicar em Adicionar Parameter
+    p) No panel "Report Inspection" > Clique com o botão direito em Parameters > Clicar em Adicionar Parameter
 
 ![alt text](docs/images/parameters.png "Parameters")
 
-    m) Será criado um parameter com nome parameter1, poré é necessário alterar o nome. 
-    n) Clique com o botão direito em cima do parametro criado > Em seguida clique em renomear e de um novo nome para o parametro
+    q) Será criado um parameter com nome parameter1, poré é necessário alterar o nome. 
+    r) Clique com o botão direito em cima do parametro criado > Em seguida clique em renomear e de um novo nome para o parametro
 
 ![alt text](docs/images/parameters1.png "Parameters")
 
-    o) Clique em cada field ou parametro e arraste-os para a área de designer
-    p) Posicione os fields em Detail
-    q) Posicione os parametros em Column Header
+    s) Clique em cada field ou parametro e arraste-os para a área de designer
+    t) Posicione os fields em Detail
+    u) Posicione os parametros em Column Header
 
 ![alt text](docs/images/designer.png "Designer")
 
-    r) Na área de designer clique em cada field e no painel Propriedades clique em "Text Field Expression"
+    v) Na área de designer clique em cada field e no painel Propriedades clique em "Text Field Expression"
 
 ![alt text](docs/images/propriedades.png "Propriedades")
 
-    s) Na tela "Text Field Expression" selecionar na primeira coluna a opção Fields e na segunda coluna selecionar a coluna do banco que pertence aquele field > Clicar em OK
+    w) Na tela "Text Field Expression" selecionar na primeira coluna a opção Fields e na segunda coluna selecionar a coluna do banco que pertence aquele field > Clicar em OK
 
 
 ![alt text](docs/images/propriedades2.png "Propriedades")
 
-    t) Na área de designer clique em cada parametro e no painel Propriedades clique em "Text Field Expression"
+    x) Na área de designer clique em cada parametro e no painel Propriedades clique em "Text Field Expression"
 
 ![alt text](docs/images/propriedades3.png "Propriedades")
 
-    u) Na tela "Text Field Expression" selecionar na primeira coluna a opção Parameters e na segunda coluna selecionar o parametro a que pertence aquele parametro > Clicar em OK
+    w) Na tela "Text Field Expression" selecionar na primeira coluna a opção Parameters e na segunda coluna selecionar o parametro a que pertence aquele parametro > Clicar em OK
 
 ![alt text](docs/images/propriedades4.png "Propriedades")
 
-    v)Obs: Nas propriedades "Text Field Expression" quando são fields do banco, eles tem que ficar na cor verde, pois significa que não esta com erro. Os parametros continuam vermelhos mesmo estando certos.
-    w) Para verificar se o seu relatório esta mostrando os dados correatamente clique na aba Preview para visualizar a prévia do PDF.
-    x) Caso não mostre o Preview signifca que o relatório esta com erro e precisa corrigir.
+    z)Obs: Nas propriedades "Text Field Expression" quando são fields do banco, eles tem que ficar na cor verde, pois significa que não esta com erro. Os parametros continuam vermelhos mesmo estando certos.
+    aa) Para verificar se o seu relatório esta mostrando os dados correatamente clique na aba Preview para visualizar a prévia do PDF.
+    ab) Caso não mostre o Preview signifca que o relatório esta com erro e precisa corrigir.
 
 ![alt text](docs/images/preview_pdf2.png "Preview PDF")
 
