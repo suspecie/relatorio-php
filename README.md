@@ -10,28 +10,22 @@ Projeto para estudar relatórios em php
     opções como uso de código de barras, sub-relatórios e etc. O
     iReport permite que os relatórios sejam gerados em XML, PDF, HTML,
     DOCX, ODT, dentre outros formatos.  
-    O iReport permite que os relatórios sejam gerados em XML, PDF, HTML,
-    DOCX, ODT, dentre outros formatos.
     Ao inserir as informações de conexão com o banco de dados (o iReport
-    traz diversas opções como JDBC, Conexão com Hibernate, XML e etc) é gerado um arquivo de extensão jrxml. Ao ser compilado, um arquivo
-    de extensão jasper também é gerado (arquivo executável do
-    relatório). Faz analogia à linguagem Java, que tem o código
-    residente nos arquivos de extensão JAVA (no caso do iReport,
-    extensão jrxml). Depois de compilados são gerados arquivos de
-    extensão CLASS (no iReport, jasper).
-
+    traz diversas opções como JDBC, Conexão com Hibernate, XML e etc) 
+    é gerado um arquivo de extensão jrxml. 
+    Ao ser compilado, um arquivo de extensão jasper também é gerado 
+    (arquivo executável do relatório). Faz analogia à linguagem Java, 
+    que tem o código residente nos arquivos de extensão JAVA 
+    (no caso do iReport, extensão jrxml). Depois de compilados são gerados
+    arquivos de extensão CLASS (no iReport, jasper).
     
     O PHPJasperXML possibilita a leitura de arquivos jrxml, feitos
     utilizando o iReport, para transformá-los em relatórios no formato
-    PDF, com o auxílio da classe FPDF. É escrito em PHP e muito fácil
-    de ser configurado. É também uma solução alternativa ao PHP/Java
-    Bridge.
-
+    PDF, com o auxílio da classe TCPDF. É escrito em PHP e muito fácil
+    de ser configurado. É também uma solução alternativa ao PHP/Java Bridge.
     Para seu uso é necessário basicamente editar o arquivo setting.php, que
     contém as variáveis indicativas da conexão com banco de dados.
-
-
-    O arquivo PHPJasperXML.inc contém a classe PHPJasperXML, que faz todo
+    O arquivo PHPJasperXML.inc.php contém a classe PHPJasperXML, que faz todo
     o “trabalho pesado” de conectar com o banco de dados (vem
     configurada para MySQL), ler o conteúdo arquivo jrxml e junto com a
     classe tcpdf, gerar o relatório em PDF.
@@ -40,6 +34,8 @@ Projeto para estudar relatórios em php
 
 
 # ENTENDENDO O QUE FOI USADO NO PROJETO
+
+Distro utilizada: Debian 8
 
 1- Instalação do iReport Designer:
 
@@ -84,7 +80,11 @@ Projeto para estudar relatórios em php
 4- Criando o Report no iReport (Já esta no projeto, é somente para ensinar)
 
     a) Abrir iReport
-    b) Arquivo > New > Blanck A4 > Dar um nome e um caminoh para o arquivo > Proximo > FInalizar
+    b) No menu Arquivo > Clicar em New > Escolher a Sessão Report > Escolher o modelo Blank A4 > Clicar no botão "Open This Template"
+    
+    ![alt text](docs/images/novo_relatorio.png "Novo Relatorio")
+
+    Dar um nome e um caminoh para o arquivo > Proximo > FInalizar
     c) Clicar no ícone Report Datasources ou na aba Welcome > Step 1
     d) Escolher a opção Database JDBC connection > Next > Escolher o drive > Dar um nome para a conexão "conexão" (é somente um nome para identificar a conexão no iReport) > em JDBC URL colocar o drive JDBC que será utilizado
         
