@@ -207,6 +207,18 @@ Distro utilizada: Debian 8
 
 
 
+# DICAS SOBRE BANDAS DO IREPORT
+
+
+    1) Title: o que é colocado dentro desta band, só aparece na primeira página de um relatório, ou seja, é o titulo do relatório.
+    2) Page Header: é o cabeçalho do relatório, tudo o que fica nesta band, se repete no inicio de cada página.
+    3) Column Header: geralmente é utilizada para definir quais são as colunas do nosso relatório.
+    4) Column Footer: utilizada para mostrar o final da listagem da band detail 1.
+    5) Page Footer: é o rodapé da página, tudo o que é definido nesta band se repete como rodapé por todas as páginas.
+    6) Summary: geralmente esta band é usada para mostrar cálculos de relatórios que tenham valores numéricos, por exemplo mostrar um total geral. Em um relatório ela é mostrada logo após que acaba a listagem do Detail 1.
+    7) Detail 1: é nela que os dados são listados, como se essa band fizesse um laço de repetição, e os dados fossem listados.
+
+
 # INSTALANDO O PROJETO DO GIT
 
     1) Fazer git clone 
@@ -230,3 +242,4 @@ Distro utilizada: Debian 8
     http://community.jaspersoft.com/project/ireport-designer/releases 
     http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk7-downloads-1880260.html
     http://www.simitgroup.com/?q=PHPJasperXML
+    http://javasemcafe.blogspot.com.br/2011/05/jasperreports-401-conhecendo-o-ireport.html
